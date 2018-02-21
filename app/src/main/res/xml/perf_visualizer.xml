@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android">
+    <PreferenceCategory
+        android:title="@string/category_daily_notifications">
+        <SwitchPreferenceCompat
+            android:defaultValue="@bool/true_for_on"
+            android:key="@string/daily_notification_select"
+            android:summaryOff="@string/daily_notification_off_summary"
+            android:summaryOn="@string/daily_notification_on_summary"
+            android:title="@string/daily_notification_title"
+            android:disableDependentsState="false"/>
+
+        <com.android.notificationexample.perference.TimePreference
+            style="@style/AppPreference.DialogPreference"
+            android:defaultValue="@string/timePreference_default_value"
+            android:key="@string/time_preference_key"
+            android:summary="@string/timePreference_summary"
+            android:title="@string/timePreference_title"
+            android:dependency="@string/daily_notification_select"
+            />
+
+    </PreferenceCategory>
+
+</PreferenceScreen>
